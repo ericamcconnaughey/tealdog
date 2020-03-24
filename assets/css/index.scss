@@ -1,0 +1,104 @@
+$color-primary: #1D9EA0;
+$color-dark: #24292E;
+$color-light: #F8F8F8;
+$color-mid: #3E3E3E;
+
+$color-transparent-black: rgba(0, 0, 0, 0.5);
+
+$body-font: "Roboto", sans-serif;
+$header-font: "Roboto", sans-serif;
+
+body {
+  font-family: $body-font;
+}
+
+.title-bar {
+  background-color: $color-light;
+  h3 {
+    color: $color-dark;
+  }
+  .menu a {
+    color: $color-dark;
+    font-weight: bold;
+  }
+  .thumbnail {
+    border: none;
+
+  }
+}
+
+main {
+  .callout {
+    border: none;
+    color: $color-dark;
+  }
+}
+
+
+
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeinout {
+  0%  { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.frame {
+  animation-name: fadein;
+  animation-duration: 3s;
+}
+
+@keyframes animated-list {
+  100% {bottom: 100px}
+}
+
+.word1 { 
+  width: 800px;
+  position: relative;
+  animation-name: fadeinout;
+  animation-duration: 2s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.word2 {
+  width: 800px;
+  position: relative;
+  animation-name: fadeinout;
+  animation-duration: 2s;
+  animation-delay: 5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.word3 {
+  width: 800px;
+  position: relative;
+  animation-name: fadeinout;
+  animation-duration: 2s;
+  animation-delay: 7s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.word4 {
+  width: 800px;
+  position: relative;
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-delay: 9s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+
+li {
+  padding: 20px;
+}
+

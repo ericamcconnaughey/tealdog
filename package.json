@@ -1,0 +1,19 @@
+{
+  "name": "tealdog",
+  "version": "1.0.0",
+  "description": "TealDog landing page with Foundation",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.13.1",
+    "onchange": "^6.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o assets/css/ assets/css/",
+    "watch:scss": "onchange 'assets/css/*.scss' -- npm run scss"
+  },
+  "author": "Erica McConnaughey",
+  "license": "ISC"
+}
