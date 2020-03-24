@@ -1,3 +1,4 @@
+// OVERALL
 $color-primary: #1D9EA0;
 $color-dark: #24292E;
 $color-light: #F8F8F8;
@@ -6,37 +7,84 @@ $color-mid: #3E3E3E;
 $color-transparent-black: rgba(0, 0, 0, 0.5);
 
 $body-font: "Roboto", sans-serif;
-$header-font: "Roboto", sans-serif;
 
 body {
   font-family: $body-font;
 }
 
+// MEDIA QUERIES
+@media screen and (min-width: 768px) {
+  .menu {
+    padding-left: 350px;
+  }
+  .thumbnail {
+    width: 70px;
+  }
+  .animated-list {
+    padding-left: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 620px) {
+  .menu {
+    padding-left: 150px;
+  }
+  .thumbnail {
+    width: 60px;
+  }
+  .animated-list {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .menu {
+    padding-left: 0px;
+  }
+  .thumbnail {
+    width: 50px;
+  }
+  .animated-list {
+    padding-left: 30px;
+  }
+}
+
+// HEADER
 .title-bar {
   background-color: $color-light;
   h3 {
     color: $color-dark;
   }
-  .menu a {
-    color: $color-dark;
-    font-weight: bold;
+  .menu {
+    a {
+      color: $color-dark;
+      font-weight: bold;
+    }
+    li {
+      padding-right: 20px;
+    }
   }
   .thumbnail {
-    border: none;
-
+    border: 2px solid $color-light;
+    box-shadow: none;
+    margin-left: 20px;
   }
 }
 
+// MAIN
 main {
+  background-color: $color-light;
   .callout {
     border: none;
     color: $color-dark;
+    background-color: $color-light;
+
   }
 }
 
 
 
-
+// ANIMATIONS
 @keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -95,10 +143,9 @@ main {
   animation-delay: 9s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
+  color: $color-primary;
 }
 
 
-li {
-  padding: 20px;
-}
+
 
