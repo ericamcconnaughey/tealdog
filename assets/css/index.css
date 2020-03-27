@@ -1,29 +1,38 @@
 body {
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  height: 100%;
+  position: fixed; }
 
 @media screen and (min-width: 768px) {
   .menu {
     padding-left: 350px; }
   .thumbnail {
     width: 70px; }
-  .animated-list {
-    padding-left: 100px; } }
+  .content__list {
+    padding-left: 100px; }
+  .callout {
+    padding-top: 200px; } }
 
 @media screen and (max-width: 768px) and (min-width: 620px) {
   .menu {
     padding-left: 150px; }
   .thumbnail {
     width: 60px; }
-  .animated-list {
-    padding-left: 50px; } }
+  .content__list {
+    padding-left: 50px; }
+  .callout {
+    padding-top: 100px; } }
 
 @media screen and (max-width: 620px) {
   .menu {
     padding-left: 0px; }
   .thumbnail {
     width: 50px; }
-  .animated-list {
-    padding-left: 30px; } }
+  .content__list {
+    padding-left: 40px; }
+  .callout {
+    padding-top: 50px; } }
 
 .title-bar {
   background-color: #F8F8F8; }
@@ -44,7 +53,96 @@ main {
   main .callout {
     border: none;
     color: #24292E;
-    background-color: #F8F8F8; }
+    background-color: #F8F8F8;
+    text-align: center; }
+    main .callout .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      font-size: 35px;
+      line-height: 40px;
+      color: #24292E; }
+      main .callout .content__container {
+        font-weight: 600;
+        overflow: hidden;
+        height: 55px;
+        padding: 0 40px; }
+        main .callout .content__container__text {
+          display: inline;
+          float: left;
+          margin: 0;
+          height: 160px; }
+        main .callout .content__container__list {
+          margin-top: 0;
+          text-align: left;
+          list-style: none;
+          -webkit-animation-name: change;
+          -webkit-animation-duration: 10s;
+          -webkit-animation-iteration-count: infinite;
+          animation-name: change;
+          animation-duration: 10s;
+          animation-iteration-count: infinite; }
+          main .callout .content__container__list__item {
+            line-height: 40px;
+            margin-top: 17px; }
+
+@-webkit-keyframes change {
+  0% {
+    transform: translate3d(0, -3%, 0); }
+  20% {
+    transform: translate3d(0, -3%, 0); }
+  40% {
+    transform: translate3d(0, -25%, 0); }
+  60% {
+    transform: translate3d(0, -45%, 0); }
+  80% {
+    transform: translate3d(0, -67%, 0); }
+  100% {
+    transform: translate3d(0, -87%, 0); } }
+
+@-o-keyframes change {
+  0% {
+    transform: translate3d(0, -3%, 0); }
+  20% {
+    transform: translate3d(0, -3%, 0); }
+  40% {
+    transform: translate3d(0, -25%, 0); }
+  60% {
+    transform: translate3d(0, -45%, 0); }
+  80% {
+    transform: translate3d(0, -67%, 0); }
+  100% {
+    transform: translate3d(0, -87%, 0); } }
+
+@-moz-keyframes change {
+  0% {
+    transform: translate3d(0, -3%, 0); }
+  20% {
+    transform: translate3d(0, -3%, 0); }
+  40% {
+    transform: translate3d(0, -25%, 0); }
+  60% {
+    transform: translate3d(0, -45%, 0); }
+  80% {
+    transform: translate3d(0, -67%, 0); }
+  100% {
+    transform: translate3d(0, -87%, 0); } }
+
+@keyframes change {
+  0% {
+    transform: translate3d(0, -3%, 0); }
+  20% {
+    transform: translate3d(0, -3%, 0); }
+  40% {
+    transform: translate3d(0, -25%, 0); }
+  60% {
+    transform: translate3d(0, -45%, 0); }
+  80% {
+    transform: translate3d(0, -67%, 0); }
+  100% {
+    transform: translate3d(0, -87%, 0); } }
 
 @keyframes fadein {
   from {
@@ -60,47 +158,6 @@ main {
   100% {
     opacity: 0; } }
 
-.frame {
+.callout {
   animation-name: fadein;
   animation-duration: 3s; }
-
-@keyframes animated-list {
-  100% {
-    bottom: 100px; } }
-
-.word1 {
-  width: 800px;
-  position: relative;
-  animation-name: fadeinout;
-  animation-duration: 2s;
-  animation-delay: 3s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out; }
-
-.word2 {
-  width: 800px;
-  position: relative;
-  animation-name: fadeinout;
-  animation-duration: 2s;
-  animation-delay: 5s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out; }
-
-.word3 {
-  width: 800px;
-  position: relative;
-  animation-name: fadeinout;
-  animation-duration: 2s;
-  animation-delay: 7s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out; }
-
-.word4 {
-  width: 800px;
-  position: relative;
-  animation-name: fadein;
-  animation-duration: 2s;
-  animation-delay: 9s;
-  animation-fill-mode: both;
-  animation-timing-function: ease-in-out;
-  color: #1D9EA0; }
